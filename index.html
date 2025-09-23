@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XDFE - Audífonos Inalámbricos de Calidad Superior</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <style>
         /* Variables CSS para una fácil personalización */
         :root {
@@ -495,7 +495,7 @@
                 <a href="#productos" class="btn-cta">Explora nuestra colección</a>
             </div>
             <div>
-                <img src="https://www.apple.com/v/airpods-pro/o/images/overview/welcome/hero__b0eal3mn03ua_large.jpg" alt="Audífonos inalámbricos XDFE">
+                <img src="img/hero_audifonos.jpg" alt="Audífonos inalámbricos XDFE">
             </div>
         </div>
     </section>
@@ -505,22 +505,22 @@
             <h2>Nuestros favoritos del momento</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://www.apple.com/v/airpods-pro/o/images/overview/welcome/hero__b0eal3mn03ua_large.jpg" alt="Audífonos On-Ear Pro">
+                    <img src="img/producto_1.jpg" alt="Audífonos On-Ear Pro">
                     <h3>Audífonos On-Ear Pro</h3>
                     <p class="price">$129.99</p>
-                    <a href="#" class="btn-buy">Comprar</a>
+                    <a href="#" class="btn-buy">Ver detalles</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC6KSUbbLalJZH33TlPvgDJefO9rNxFZBWxA&s" alt="Audífonos In-Ear Compact">
+                    <img src="img/producto_2.jpg" alt="Audífonos In-Ear Compact">
                     <h3>Audífonos In-Ear Compact</h3>
                     <p class="price">$79.99</p>
-                    <a href="#" class="btn-buy">Comprar</a>
+                    <a href="#" class="btn-buy">Ver detalles</a>
                 </div>
                 <div class="product-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfIarFWVCiRJUag_-Es-nJaY104k7gj-L8sg&s" alt="Audífonos Over-Ear Max">
+                    <img src="img/producto_3.jpg" alt="Audífonos Over-Ear Max">
                     <h3>Audífonos Over-Ear Max</h3>
                     <p class="price">$199.99</p>
-                    <a href="#" class="btn-buy">Comprar</a>
+                    <a href="#" class="btn-buy">Ver detalles</a>
                 </div>
             </div>
         </div>
@@ -582,15 +582,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Manejo de los botones de "Comprar"
-            const buyButtons = document.querySelectorAll('.btn-buy');
-            buyButtons.forEach(button => {
-                button.addEventListener('click', function(event) {
-                    event.preventDefault(); // Evita que el enlace salte a la parte superior
-                    alert('¡Producto añadido al carrito! (Funcionalidad de compra no implementada)');
-                });
-            });
-
             // Manejo del botón "Explora nuestra colección" para hacer scroll suave
             const ctaButton = document.querySelector('.btn-cta');
             if (ctaButton) {
