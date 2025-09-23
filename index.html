@@ -105,96 +105,115 @@
             color: var(--primary-color);
         }
 
-        /* Iconos del encabezado */
+        /* Ícono de Carrito (diseñado con CSS) */
         .header-icons {
             display: flex;
             gap: 1.5rem;
+            align-items: center; /* Alinea los íconos verticalmente */
         }
 
-        .header-icons img {
-            height: 24px;
-            width: 24px;
+        .cart-icon-css {
+            width: 28px;
+            height: 28px;
+            position: relative;
+            cursor: pointer;
             transition: transform 0.2s ease;
         }
 
-        .header-icons img:hover {
-            transform: scale(1.1); /* Efecto de zoom suave */
+        .cart-icon-css:hover {
+            transform: scale(1.1);
         }
 
-        /* Sección Hero */
+        .cart-icon-css::before { /* Cuerpo del carrito */
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 16px;
+            border: 2px solid var(--primary-color);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+            top: 8px;
+            left: 4px;
+        }
+
+        .cart-icon-css::after { /* Asa del carrito */
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            border: 2px solid var(--primary-color);
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            top: 4px;
+            left: 9px;
+        }
+        
+        .header-icons .user-icon {
+             height: 24px;
+             width: 24px;
+             transition: transform 0.2s ease;
+        }
+        .header-icons .user-icon:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* Sección Hero REDISEÑADA */
         #hero {
-            background: linear-gradient(135deg, var(--light-bg) 0%, var(--dark-bg) 100%); /* Degradado sutil */
-            padding: 6rem 0;
+            background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%); /* Nuevo degradado vibrante */
+            padding: 8rem 0; /* Más altura */
             text-align: center;
+            color: var(--white); /* Texto blanco para contraste */
             border-bottom: 1px solid var(--border-color);
+            min-height: 50vh; /* Asegura una altura mínima */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
+            justify-content: center; /* Centra el contenido horizontalmente */
         }
 
         #hero .container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap-reverse; /* Imagen primero en móviles */
-        }
-
-        #hero > div:first-child { /* Contenido de texto */
-            flex: 1;
-            min-width: 300px;
-            text-align: left;
+            display: block; /* Vuelve a ser un bloque simple */
+            max-width: 800px; /* Ancho máximo para el texto */
         }
 
         #hero h1 {
-            font-size: 3.5rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: 4rem; /* Título más grande */
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+            color: var(--white); /* Asegura que el color del texto sea blanco */
         }
 
         #hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
+            font-size: 1.5rem; /* Párrafo más grande */
+            margin-bottom: 3rem;
+            max-width: 600px; /* Limita el ancho del párrafo */
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.9); /* Blanco con transparencia */
         }
 
-        #hero > div:last-child { /* Imagen */
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #hero img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px var(--shadow-medium);
-            transition: transform 0.3s ease;
-        }
-
-        #hero img:hover {
-            transform: scale(1.02);
-        }
-
-        /* Botón CTA (Call To Action) */
+        /* Botón CTA (Call To Action) - Estilos ajustados para el fondo oscuro */
         .btn-cta {
-            display: inline-block;
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 50px; /* Botón redondeado */
+            padding: 1.2rem 3rem; /* Más grande */
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra para el botón */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+            border: 2px solid var(--white); /* Borde blanco para resaltar */
         }
 
         .btn-cta:hover {
             background-color: #0056b3;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+            transform: translateY(-7px); /* Mayor efecto al pasar el mouse */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         /* Secciones Generales */
@@ -417,18 +436,14 @@
             nav ul {
                 gap: 1.5rem;
             }
-            #hero .container {
-                flex-direction: column-reverse; /* Imagen abajo en móviles */
-                text-align: center;
-            }
-            #hero > div:first-child {
-                text-align: center;
+            #hero {
+                padding: 6rem 0;
             }
             #hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             #hero p {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
             section h2 {
                 font-size: 2rem;
@@ -462,6 +477,16 @@
             .header-icons {
                 margin-top: 1rem;
             }
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+            #hero p {
+                font-size: 1rem;
+            }
+            .btn-cta {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -481,22 +506,17 @@
                 </ul>
             </nav>
             <div class="header-icons">
-                <a href="#"><img src="https://via.placeholder.com/24/007bff/ffffff?text=🛒" alt="Carrito"></a>
-                <a href="#"><img src="https://via.placeholder.com/24/007bff/ffffff?text=👤" alt="Usuario"></a>
+                <a href="#" class="cart-icon-css" aria-label="Carrito de compras"></a>
+                <a href="#"><img src="https://via.placeholder.com/24/007bff/ffffff?text=👤" alt="Usuario" class="user-icon"></a>
             </div>
         </div>
     </header>
 
     <section id="hero">
         <div class="container">
-            <div>
-                <h1>Libera tu sonido con <strong>XDFE</strong></h1>
-                <p>Descubre la libertad de la música sin cables, con la mejor calidad de audio y la tecnología más avanzada.</p>
-                <a href="#productos" class="btn-cta">Explora nuestra colección</a>
-            </div>
-            <div>
-                <img src="img/hero_audifonos.jpg" alt="Audífonos inalámbricos XDFE">
-            </div>
+            <h1>Descubre el sonido, **redefine tu experiencia**</h1>
+            <p>Sumérgete en un mundo de audio inigualable con la tecnología avanzada de XDFE. Claridad, potencia y estilo en cada nota.</p>
+            <a href="#productos" class="btn-cta">Explora la Colección Premium</a>
         </div>
     </section>
 
@@ -582,7 +602,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Manejo del botón "Explora nuestra colección" para hacer scroll suave
+            // Manejo del botón "Explora la Colección Premium" para hacer scroll suave
             const ctaButton = document.querySelector('.btn-cta');
             if (ctaButton) {
                 ctaButton.addEventListener('click', function(event) {
