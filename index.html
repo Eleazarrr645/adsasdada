@@ -159,61 +159,60 @@
             transform: scale(1.1);
         }
 
-
-        /* Sección Hero REDISEÑADA */
+        /* Sección Hero REDISEÑADA y PROFESIONAL */
         #hero {
-            background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%); /* Nuevo degradado vibrante */
-            padding: 8rem 0; /* Más altura */
+            background-color: var(--white);
+            padding: 6rem 0; /* Más altura para el espacio */
             text-align: center;
-            color: var(--white); /* Texto blanco para contraste */
             border-bottom: 1px solid var(--border-color);
-            min-height: 50vh; /* Asegura una altura mínima */
+            min-height: 50vh;
             display: flex;
-            align-items: center; /* Centra el contenido verticalmente */
-            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center;
+            justify-content: center;
         }
 
         #hero .container {
-            display: block; /* Vuelve a ser un bloque simple */
-            max-width: 800px; /* Ancho máximo para el texto */
+            display: block;
+            max-width: 800px;
         }
 
         #hero h1 {
-            font-size: 4rem; /* Título más grande */
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
-            color: var(--white); /* Asegura que el color del texto sea blanco */
+            color: var(--text-dark);
         }
 
         #hero p {
-            font-size: 1.5rem; /* Párrafo más grande */
-            margin-bottom: 3rem;
-            max-width: 600px; /* Limita el ancho del párrafo */
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            color: rgba(255, 255, 255, 0.9); /* Blanco con transparencia */
+            color: var(--text-light);
         }
 
-        /* Botón CTA (Call To Action) - Estilos ajustados para el fondo oscuro */
+        /* Botón CTA (Call To Action) - Estilos más sutiles */
         .btn-cta {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1.2rem 3rem; /* Más grande */
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 0.8rem 2.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-            border: 2px solid var(--white); /* Borde blanco para resaltar */
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--primary-color);
         }
 
         .btn-cta:hover {
-            background-color: #0056b3;
-            transform: translateY(-7px); /* Mayor efecto al pasar el mouse */
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
         }
 
         /* Secciones Generales */
@@ -437,13 +436,13 @@
                 gap: 1.5rem;
             }
             #hero {
-                padding: 6rem 0;
+                padding: 4rem 0;
             }
             #hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             #hero p {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
             section h2 {
                 font-size: 2rem;
@@ -481,11 +480,11 @@
                 font-size: 2.2rem;
             }
             #hero p {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .btn-cta {
-                padding: 1rem 2rem;
-                font-size: 1rem;
+                padding: 0.8rem 1.8rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -514,9 +513,9 @@
 
     <section id="hero">
         <div class="container">
-            <h1>Descubre el sonido, **redefine tu experiencia**</h1>
-            <p>Sumérgete en un mundo de audio inigualable con la tecnología avanzada de XDFE. Claridad, potencia y estilo en cada nota.</p>
-            <a href="#productos" class="btn-cta">Explora la Colección Premium</a>
+            <h1>Audio de alta fidelidad, diseñado para ti</h1>
+            <p>Descubre una calidad de sonido excepcional y un diseño impecable que se adapta a tu estilo de vida.</p>
+            <a href="#productos" class="btn-cta">Explora la Colección</a>
         </div>
     </section>
 
@@ -540,6 +539,24 @@
                     <img src="img/producto_3.jpg" alt="Audífonos Over-Ear Max">
                     <h3>Audífonos Over-Ear Max</h3>
                     <p class="price">$199.99</p>
+                    <a href="#" class="btn-buy">Ver detalles</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/400x300/e9ecef?text=Producto+4" alt="Producto 4">
+                    <h3>Audífonos Sport Fit</h3>
+                    <p class="price">$89.99</p>
+                    <a href="#" class="btn-buy">Ver detalles</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/400x300/e9ecef?text=Producto+5" alt="Producto 5">
+                    <h3>Audífonos Noise Cancelling</h3>
+                    <p class="price">$249.99</p>
+                    <a href="#" class="btn-buy">Ver detalles</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/400x300/e9ecef?text=Producto+6" alt="Producto 6">
+                    <h3>Audífonos Retro Style</h3>
+                    <p class="price">$119.99</p>
                     <a href="#" class="btn-buy">Ver detalles</a>
                 </div>
             </div>
@@ -602,7 +619,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Manejo del botón "Explora la Colección Premium" para hacer scroll suave
+            // Manejo del botón "Explora la Colección" para hacer scroll suave
             const ctaButton = document.querySelector('.btn-cta');
             if (ctaButton) {
                 ctaButton.addEventListener('click', function(event) {
